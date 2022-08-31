@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./swiper/swiper.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Студика - карточка УЗ</title>
+  <script defer src="./swiper/swiper.min.js"></script>
+  <script defer src="./chart/chart.min.js"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body class="js-body">
+  <div class="site-container">
+    <header class="header">
+      <div class="container">
+        <div class="header__mobile">
+          <button class="burger">
+            <span class="burger__line burger__line--top"></span>
+            <span class="burger__line burger__line--middle"></span>
+            <span class="burger__line burger__line--bottom"></span>
+          </button>
+          <a href="#" class="logo">
+            <svg class="logo__svg">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="likes">
+            <svg class="heart-svg header__heart-svg">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+            <span class="header__number-like">1</span>
+          </div>
+        </div>
+        <div class="header__top">
+          <a href="#" class="logo header__logo">
+            <svg class="logo__svg">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="header__locations">
+            <div class="header__locations-pic"></div>
+            <span class="header__location-town js-location-town">Москва</span>
+            <div class="locations-dropdown js-locations-dropdown">
+              <div class="locations-dropdown__content">
+                <input class="locations-dropdown__input" type="text" placeholder="Регион,город,населенный пункт">
+                <div class="locations-dropdown__selected-city"></div>
+                <div class="locations-dropdown__allcity js-allcity-block">
+                </div>
+              </div>
+              <button class="locations-dropdown__button">Сохранить</button>
+            </div>
+          </div>
+          <form action="#" class="header__form">
+            <input class="header__input" type="search" placeholder="Учебное заведение, специальность или профессия">
+          </form>
+          <div class="header__wrapper">
+            <div class="likes header__likes">
+              <svg class="heart-svg header__heart-svg">
+                <use xlink:href="img/sprite.svg#heart"></use>
+              </svg>
+              <span class="header__number-like">1</span>
+            </div>
+            <div class="header__users">
+              <span class="header__user-name">Екатерина</span>
+              <img class="header__user-img" src="img/user-avatar.png" alt="Аватар пользователя">
+            </div>
+          </div>
+        </div>
+        <nav class="nav">
+          <button class="nav__button nav__button--left disactive">
+            <svg class="nav__svg">
+              <use xlink:href="img/sprite.svg#arrow-right-black"></use>
+            </svg>
+          </button>
+          <ul class="nav__list js-nav-list">
+            <li class="nav__item"><a href="#" class="nav__link">Вузы</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Колледжи</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Техникумы</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Училища</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Специальности</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Профессии</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Учебным заведениям</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--nothover">Тест на профориентацию</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Специальности</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Профессии</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Учебным заведениям</a></li>
+          </ul>
+          <button class="nav__button disactive">
+            <svg class="nav__svg">
+              <use xlink:href="img/sprite.svg#arrow-right-black"></use>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <ul class="breadcrumbs-list">
+          <li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link">Москва</a></li>
+          <li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link">Высшее образование</a></li>
+          <li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link">Вузы</a></li>
+          <li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link">Мгту им.Н.Э. Баумана</a></li>
+        </ul>
+        <div class="back">
+          <a href="#" class="back__link">Назад</a>
+        </div>
+        <div class="hero">
+          <div class="hero__imgbox">
+            <div class="hero__shield"></div>
+            <div class="hero__buttons">
+              <button class="button hero__button button--blue">Оставить отзыв</button>
+              <button class="button hero__button button--whiteblue">Проверить шансы поступить</button>
+            </div>
+          </div>
+          <div class="hero__contents">
+            <div class="hero__head">
+              <h1 class="title-h1 hero__title">Московский государственный технический
+                университет имени Н.Э. Б&aacute;умана</h1>
+              <div class="hero__actions">
+                <button class="button-in-favorites hero__button-in-favorites">
+                  <svg class="heart-svg hero__heart-svg">
+                    <use xlink:href="img/sprite.svg#heart"></use>
+                  </svg>
+                  <span>В Избранное</span>
+                </button>
+                <button class="bell hero__bell">
+                  <svg class="bell__svg">
+                    <use xlink:href="img/sprite.svg#bell"></use>
+                  </svg>
+                </button>
+                <a href="#" class="download" download="">
+                  <svg class="download__svg">
+                    <use xlink:href="img/sprite.svg#download"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <ul class="adress-list adress-list__hero">
+              <li class="adress-list__item adress-list__item--flex">
+                <div class="stars">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#star-yellow"></use>
+                  </svg>
+                </div>
+                <p class="hero__rating">2.4 <span class="hero__text">(75 отзывов)</span></p>
+              </li>
+              <li class="adress-list__item">
+                <p class="adress-list__text">Москва, ул. Новочеремушкинская, д. 69</p>
+              </li>
+              <li class="adress-list__item">
+                <p class="adress-list__text">Приемная комиссия: <a href="tel:+74991812133">7 (499) 181 21 33</a></p>
+              </li>
+            </ul>
+            <div class="dates hero__dates">
+              <p class="hero__text">Обновлено 11.11.2011</p>
+              <a href="#" class="hero__link-error">Сообщить об ошибке</a>
+            </div>
+          </div>
+          <div class="dates dates--main">         
+              <p class="hero__text">Обновлено 11.11.2011</p>
+              <a href="#" class="hero__link-error">Сообщить об ошибке</a>
+          </div>
+        </div>
+        <div class="content js-content">
+          <div class="content__left js-content-left">
+            <ul class="content-list">
+              <li class="content-list__item"><a href="#" class="content-list__link"><span
+                    class="content-list__text">Основная иформация</span><span
+                    class="content-list__counter">10000</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span
+                    class="content-list__text">Специальности</span><span class="content-list__counter">100</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span class="content-list__text">Об
+                    университете</span><span class="content-list__counter">100</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span
+                    class="content-list__text">Контакты</span><span class="content-list__counter">100</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span
+                    class="content-list__text">Отзывы</span><span class="content-list__counter">100</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span
+                    class="content-list__text">Преподаватели</span><span class="content-list__counter">100</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span
+                    class="content-list__text">Профессии</span><span class="content-list__counter">100</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span
+                    class="content-list__text">Новости</span><span class="content-list__counter">100</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span
+                    class="content-list__text">Задать вопрос</span><span class="content-list__counter">100</span></a></li>
+              <li class="content-list__item"><a href="#" class="content-list__link"><span class="content-list__text">Часто
+                    задаваемые вопросы</span><span class="content-list__counter">100</span></a></li>
+            </ul>
+          </div>
+          <div class="content__right">
+            <h2 class="title-h2 content__title">Основная информация</h2>
+            <div class="information">
+              <div class="seats">
+                <div class="seats__left">
+                  <p class="seats__top-text seats__top-text--blue">4 532</p>
+                  <p class="seats__bottom-text">платных мест</p>
+                </div>
+                <div class="seats__right">
+                  <p class="seats__top-text seats__top-text--blue">1 702</p>
+                  <p class="seats__bottom-text">бюджетных мест</p>
+                </div>
+              </div>
+              <div class="seats">
+                <div class="seats__left">
+                  <p class="seats__top-text">1 место</p>
+                  <p class="seats__bottom-text">В Санкт-Петербурге</p>
+                </div>
+                <div class="seats__left">
+                  <p class="seats__top-text">12 место</p>
+                  <p class="seats__bottom-text">в РФ</p>
+                </div>
+              </div>
+              <ul class="info-box">
+                <li class="info-box__item">
+                  <p class="info-box__text info-box__text--true">Государственный</p>
+                </li>
+                <li class="info-box__item">
+                  <p class="info-box__text info-box__text--false">Общежитие</p>
+                </li>
+                <li class="info-box__item">
+                  <p class="info-box__text info-box__text--true">Военная кафедра</p>
+                </li>
+              </ul>
+              <div class="sign-in-box">
+                <div class="sign-in-box__text">Вы представитель УЗ</div>
+                <a href="#" class="sign-in-box__link">Получить доступ</a>
+              </div>
+            </div>
+            <div class="grafic">
+              <h2 class="title-h2 grafic__title">Проходной бал</h2>
+              <div class="grafic__box">
+                <canvas id="grafic" width="600" height="400"></canvas>
+              </div>
+            </div>
+            <div class="speciality">
+              <div class="speciality__header">
+                <div class="speciality__wrap">
+                  <h2 class="title-h2 speciality__title">Специальности</h2>
+                  <p class="speciality__subtitle">432 специальности</p>
+                </div>
+                <p class="speciality__text">Специальности МГТУ им. Н. Э. Баумана</p>
+              </div>
+              <ul class="speciality-filters">
+                <li class="speciality-filters__item">
+                  <p class="speciality-filters__text">Сортировать:</p>
+                </li>
+                <li class="speciality-filters__item">
+                  <button class="speciality-filters__button speciality-filters__button--firstelem">по оплате в
+                    год</button>
+                </li>
+                <li class="speciality-filters__item">
+                  <button class="speciality-filters__button">по отзывам</button>
+                </li>
+                <li class="speciality-filters__item">
+                  <button class="speciality-filters__button">по проходному балу</button>
+                </li>
+                <li class="speciality-filters__item">
+                  <button class="speciality-filters__button">по количеству бюджетных мест</button>
+                </li>
+              </ul>
+              <!-- Slider main container -->
+              <div class="speciality-swiper js-swiper" data-mobile="false">
+                <!-- Additional required wrapper -->
+                <div class="speciality-swiper__wrapper">
+                  <div class="swiper-slide speciality-swiper__slide">
+                    <div class="speciality-swiper__imgbox">
+                      <img class="speciality-swiper__img" src="img/filter-img.jpg" alt="Картинка аудитории">
+                    </div>
+                    <div class="speciality-swiper__body">
+                      <span class="speciality-swiper__spans">
+                        <span>бакалавриат</span>
+                        <span>01.03.00</span>
+                      </span>
+                      <h2 class="speciality-swiper__title">Прикладная математика и информатика</h2>
+                      <div class="speciality-swiper__shields">
+                        <a href="#" class="speciality-swiper__shield">Очно</a>
+                        <a href="#" class="speciality-swiper__shield">Заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Очно-заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Дистанционно</a>
+                      </div>
+                      <p class="speciality-swiper__description">Программное обеспечение вычислительных систем &middot;
+                        Математическое и&nbsp;программное обеспечение защиты информации &middot; Экономика &middot;
+                        Организация педагогическо...</p>
+                      <a href="#" class="speciality-swiper__viewall">Все 43 профиля</a>
+                    </div>
+                    <ul class="speciality-swiper-list">
+                      <li class="speciality-swiper-list__item">
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic2"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic3"></use>
+                        </svg>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Бюджетных мест</span>
+                        <span class="speciality-swiper-list__number">260</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Проходной бал</span>
+                        <span class="speciality-swiper-list__number">от 152</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Оплата в год</span>
+                        <span class="speciality-swiper-list__number">от&nbsp;90&nbsp;000&nbsp;₽</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="swiper-slide speciality-swiper__slide">
+                    <div class="speciality-swiper__imgbox">
+                      <img class="speciality-swiper__img" src="img/filter-img.jpg" alt="Картинка аудитории">
+                    </div>
+                    <div class="speciality-swiper__body">
+                      <span class="speciality-swiper__spans">
+                        <span>бакалавриат</span>
+                        <span>01.03.00</span>
+                      </span>
+                      <h2 class="speciality-swiper__title">Прикладная математика и информатика</h2>
+                      <div class="speciality-swiper__shields">
+                        <a href="#" class="speciality-swiper__shield">Очно</a>
+                        <a href="#" class="speciality-swiper__shield">Заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Очно-заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Дистанционно</a>
+                      </div>
+                      <p class="speciality-swiper__description">Программное обеспечение вычислительных систем &middot;
+                        Математическое и&nbsp;программное обеспечение защиты информации &middot; Экономика &middot;
+                        Организация педагогическо...</p>
+                      <a href="#" class="speciality-swiper__viewall">Все 43 профиля</a>
+                    </div>
+                    <ul class="speciality-swiper-list">
+                      <li class="speciality-swiper-list__item">
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic2"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic3"></use>
+                        </svg>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Бюджетных мест</span>
+                        <span class="speciality-swiper-list__number">260</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Проходной бал</span>
+                        <span class="speciality-swiper-list__number">от 152</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Оплата в год</span>
+                        <span class="speciality-swiper-list__number">от&nbsp;90&nbsp;000&nbsp;₽</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="swiper-slide speciality-swiper__slide">
+                    <div class="speciality-swiper__imgbox">
+                      <img class="speciality-swiper__img" src="img/filter-img.jpg" alt="Картинка аудитории">
+                    </div>
+                    <div class="speciality-swiper__body">
+                      <span class="speciality-swiper__spans">
+                        <span>бакалавриат</span>
+                        <span>01.03.00</span>
+                      </span>
+                      <h2 class="speciality-swiper__title">Прикладная математика и информатика</h2>
+                      <div class="speciality-swiper__shields">
+                        <a href="#" class="speciality-swiper__shield">Очно</a>
+                        <a href="#" class="speciality-swiper__shield">Заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Очно-заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Дистанционно</a>
+                      </div>
+                      <p class="speciality-swiper__description">Программное обеспечение вычислительных систем &middot;
+                        Математическое и&nbsp;программное обеспечение защиты информации &middot; Экономика &middot;
+                        Организация педагогическо...</p>
+                      <a href="#" class="speciality-swiper__viewall">Все 43 профиля</a>
+                    </div>
+                    <ul class="speciality-swiper-list">
+                      <li class="speciality-swiper-list__item">
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic2"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic3"></use>
+                        </svg>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Бюджетных мест</span>
+                        <span class="speciality-swiper-list__number">260</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Проходной бал</span>
+                        <span class="speciality-swiper-list__number">от 152</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Оплата в год</span>
+                        <span class="speciality-swiper-list__number">от&nbsp;90&nbsp;000&nbsp;₽</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="swiper-slide speciality-swiper__slide">
+                    <div class="speciality-swiper__imgbox">
+                      <img class="speciality-swiper__img" src="img/filter-img.jpg" alt="Картинка аудитории">
+                    </div>
+                    <div class="speciality-swiper__body">
+                      <span class="speciality-swiper__spans">
+                        <span>бакалавриат</span>
+                        <span>01.03.00</span>
+                      </span>
+                      <h2 class="speciality-swiper__title">Прикладная математика и информатика</h2>
+                      <div class="speciality-swiper__shields">
+                        <a href="#" class="speciality-swiper__shield">Очно</a>
+                        <a href="#" class="speciality-swiper__shield">Заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Очно-заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Дистанционно</a>
+                      </div>
+                      <p class="speciality-swiper__description">Программное обеспечение вычислительных систем &middot;
+                        Математическое и&nbsp;программное обеспечение защиты информации &middot; Экономика &middot;
+                        Организация педагогическо...</p>
+                      <a href="#" class="speciality-swiper__viewall">Все 43 профиля</a>
+                    </div>
+                    <ul class="speciality-swiper-list">
+                      <li class="speciality-swiper-list__item">
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic2"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic3"></use>
+                        </svg>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Бюджетных мест</span>
+                        <span class="speciality-swiper-list__number">260</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Проходной бал</span>
+                        <span class="speciality-swiper-list__number">от 152</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Оплата в год</span>
+                        <span class="speciality-swiper-list__number">от&nbsp;90&nbsp;000&nbsp;₽</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="swiper-slide speciality-swiper__slide">
+                    <div class="speciality-swiper__imgbox">
+                      <img class="speciality-swiper__img" src="img/filter-img.jpg" alt="Картинка аудитории">
+                    </div>
+                    <div class="speciality-swiper__body">
+                      <span class="speciality-swiper__spans">
+                        <span>бакалавриат</span>
+                        <span>01.03.00</span>
+                      </span>
+                      <h2 class="speciality-swiper__title">Прикладная математика и информатика</h2>
+                      <div class="speciality-swiper__shields">
+                        <a href="#" class="speciality-swiper__shield">Очно</a>
+                        <a href="#" class="speciality-swiper__shield">Заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Очно-заочно</a>
+                        <a href="#" class="speciality-swiper__shield">Дистанционно</a>
+                      </div>
+                      <p class="speciality-swiper__description">Программное обеспечение вычислительных систем &middot;
+                        Математическое и&nbsp;программное обеспечение защиты информации &middot; Экономика &middot;
+                        Организация педагогическо...</p>
+                      <a href="#" class="speciality-swiper__viewall">Все 43 профиля</a>
+                    </div>
+                    <ul class="speciality-swiper-list">
+                      <li class="speciality-swiper-list__item">
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic2"></use>
+                        </svg>
+                        <svg class="speciality-swiper__svg">
+                          <use xlink:href="img/sprite.svg#speciality-swiper-pic3"></use>
+                        </svg>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Бюджетных мест</span>
+                        <span class="speciality-swiper-list__number">260</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Проходной бал</span>
+                        <span class="speciality-swiper-list__number">от 152</span>
+                      </li>
+                      <li class="speciality-swiper-list__item">
+                        <span class="speciality-swiper-list__text">Оплата в год</span>
+                        <span class="speciality-swiper-list__number">от&nbsp;90&nbsp;000&nbsp;₽</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+               <div class="swiper-pagination"></div>
+              </div>
+              <button class="button speciality__button">Показать все специальности</button>
+            </div>
+            <div class="about-university">
+              <div class="about-university__head">
+                <h2 class="title-h2">Об университете</h2>
+                <p class="about-university__subtitle">Об МГТУ им. Н. Э. Баумана</p>
+              </div>
+              <div class="about-university__gallerey">
+                <div class="about-university__imgbox about-university__imgbox--big">
+                  <img class="about-university__img" src="img/univer1.jpg" alt="Фото универа">
+                </div>
+                <div class="about-university__imgbox">
+                  <img class="about-university__img" src="img/univer2.jpg" alt="Фото универа">
+                </div>
+                <div class="about-university__imgbox">
+                  <img class="about-university__img" src="img/univer3.jpg" alt="Фото универа">
+                </div>
+                <div class="about-university__imgbox">
+                  <img class="about-university__img" src="img/univer4.jpg" alt="Фото универа">
+                </div>
+                <div class="about-university__imgbox">
+                  <img class="about-university__img" src="img/univer5.jpg" alt="Фото универа">
+                </div>
+              </div>
+              <div class="about-university__descriptions">
+                <p class="about-university__description">Московский университет ― это один из самых старейших
+                  университетов России, был основан в 1755 году. Университет известен во мире и занимает лидирующие места
+                  в рейтингах вузов самых различных направлений.</p>
+                <p class="about-university__description">
+                  В 2008 году он получил награду «Европейское качество» «за стремление достичь высокого качества
+                  образовательных услуг в соответствии с международными стандартами». МГТУ им. Н. Э. Баумана в течение
+                  более чем 14 лет является головным вузом Ассоциации технических университетов, в состав которой входят
+                  более 130 российских университетов.</p>
+                <p class="about-university__description">Московский университет ― это один из самых старейших
+                  университетов России, был основан в 1755 году. Университет известен во мире и занимает лидирующие места
+                  в рейтингах вузов самых различных направлений.</p>
+                <p class="about-university__description">
+                  В 2008 году он получил награду «Европейское качество» «за стремление достичь высокого качества
+                  образовательных услуг в соответствии с международными стандартами». МГТУ им. Н. Э. Баумана в течение
+                  более чем 14 лет является головным вузом Ассоциации технических университетов, в состав которой входят
+                  более 130 российских университетов.</p>
+                <p class="about-university__description">Московский университет ― это один из самых старейших
+                  университетов России, был основан в 1755 году. Университет известен во мире и занимает лидирующие места
+                  в рейтингах вузов самых различных направлений.</p>
+                <p class="about-university__description">
+                  В 2008 году он получил награду «Европейское качество» «за стремление достичь высокого качества
+                  образовательных услуг в соответствии с международными стандартами». МГТУ им. Н. Э. Баумана в течение
+                  более чем 14 лет является головным вузом Ассоциации технических университетов, в состав которой входят
+                  более 130 российских университетов.</p>
+                <button class="about-university__expand">Развернуть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
