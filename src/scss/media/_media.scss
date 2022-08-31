@@ -1,0 +1,192 @@
+@media screen and (max-width:1100px) {
+  .header__mobile{
+    display: flex;
+  }
+  .header__top,
+  .nav{
+    display: none;
+  }
+  .back{
+    display: block;
+  }
+  .breadcrumbs-list{
+    display: none;
+  }
+  .hero__actions{
+    position: absolute;
+    bottom: 261px;
+    right: 20px;
+  }
+  .hero__dates{
+    display: none;
+  }
+  .dates--main{
+    display: flex;
+  }
+  .button-in-favorites{
+    padding: 11px;
+    span{
+      display: none;
+    }
+  }
+  .hero__buttons{
+    display: none;
+  }
+  .bell{
+    display: none;
+  }
+  .download{
+    background: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  .hero__heart-svg{
+    margin-right: 0;
+    width: 18px;
+    height: 18px;
+  }
+  .title-h1{
+    font-size: 18px;
+  }
+  .hero__text{
+    font-size: 13px;
+  }
+  .hero__list{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+  .hero__item{
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .hero__item::before{
+    display: none;
+  }
+  .hero__item--flex{
+    order: 1;
+  }
+  .adress-list{
+    margin-bottom: 0;
+  }
+  .adress-list__item:not(:last-child){
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .adress-list__item::before{
+    display: none;
+  }
+  .adress-list__hero{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .adress-list__item--flex{
+    margin: 10px 0 0 0;
+    order: 1;
+  }
+  .content__left{
+    display: none;
+  }
+  .content__right{
+    width: 100%;
+    margin: 0;
+  }
+  .scroll-menu{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .title-h2{
+    font-size: 23px;
+  }
+   .seats,
+   .info-box,
+   .sign-in-box{
+     grid-column: span 12;
+   }
+   .seats__top-text{
+    font-size: 23px;
+   }
+  .speciality-swiper{
+    padding-bottom: 50px;
+    .swiper-pagination{
+      display: block;
+      bottom: 22px;
+    }
+  }
+  .speciality-swiper__wrapper{
+    display: flex;
+  }
+  .speciality-swiper__slide{
+    flex-direction: column;
+  }
+  .speciality-swiper__imgbox{
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .speciality-swiper__title{
+    margin-bottom: 16px;
+  }
+  .speciality-swiper__img{
+    max-width: 100%;
+    min-height: auto;
+  }
+  .speciality-swiper__body{
+    padding-right: 0;
+    border-right: none;
+    margin-right: 0;
+  }
+  .speciality-swiper-list{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .speciality-swiper-list__item{
+    flex-direction: column;
+    padding: 0;
+  }
+  .speciality-swiper__description,
+  .speciality-swiper__viewall,
+  .speciality-swiper-list__item:first-child{
+    display: none;
+  }
+  .speciality-swiper-list__item:not(:last-child){
+    border-bottom: none;
+  }
+  .about-university__gallerey{
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .about-university__imgbox{
+    grid-column: span 2;
+  }
+  .about-university__imgbox--big{
+    grid-column: span 3;
+  }
+  .hero__imgbox{
+    height: 122px;
+  }
+  .hero__contents{
+    padding: 16px;
+  }
+  .adress-list__text{
+    font-size: 11px;
+  }
+  .adress-list__item:not(:last-child){
+    margin-bottom: 5px;
+  }
+  .content__title,
+  .grafic__title,
+  .speciality__title{
+    text-align: center;
+  }
+  .speciality__text,
+  .speciality__subtitle{
+    display: none;
+  }
+  .speciality-filters{
+    display: none;
+  }
+}

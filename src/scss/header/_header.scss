@@ -1,0 +1,344 @@
+.header{
+  background-color: $colorWhite;
+  &__top,
+  &__locations,
+  &__likes,
+  &__users,
+  &__wrapper{
+    display: flex;
+    align-items: center;
+  }
+  &__top{
+    padding-top: 29px;
+    padding-bottom: 12px;
+  }
+  &__wrapper{
+    margin-left: auto;
+  }
+  &__logo{
+    margin-right: 15px;
+  }
+  &__likes{
+    margin-right: 32px;
+    padding: 8px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.2s linear;
+    &:hover{
+      background-color: $colorGreyWhite2;
+    }
+  }
+  &__locations{
+    margin-right: 60px;
+    cursor: pointer;
+    transition: background 0.2s linear;
+    position: relative;
+    &:hover .header__locations-pic{
+      background-color: $colorGreyWhite2;
+    }
+  }
+  &__locations-pic{
+    width: 33px;
+    height: 33px;
+    border: 1px solid $colorGreyWhite2;
+    border-radius: 100%;
+    margin-right: 10px;
+    position: relative;
+    &:before{
+      content: '';
+      width: 15px;
+      height: 19px;
+      position: absolute;
+      background-image: url('../img/navigator.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  &__heart-svg{
+    margin-right: 10px;
+  }
+  &__location-town,
+  &__user-name{
+    color: $colorBlack;
+    font-size: 14px;
+  }
+  &__user-name{
+    margin-right: 5px;
+  }
+  &__user-img{
+    width: 100%;
+    max-width: 32px;
+    height: 32px;
+  }
+  &__form{
+    flex-basis: 592px;
+    margin-right: 10px;
+  }
+  &__input{
+    width: 100%;
+    border-radius: 100px;
+    background-color: $colorGreyWhite;
+    padding: 13px 48px;
+    border: none;
+    background-image: url('../img/search-pic.svg');
+    background-repeat: no-repeat;
+    background-position: left 18px center;
+    outline: none;
+    transition: box-shadow 0.2s linear;
+    &::placeholder{
+      text-align: center;
+    }
+    &:focus{
+      background-color: white;
+      box-shadow: 0 0 0 2px #abc8ea;
+    }
+  }
+  &__mobile{
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    display: none;
+  }
+}
+.logo{
+  &__svg{
+    width: 88px;
+    height: 32px;
+  }
+}
+.likes{
+  display: flex;
+  align-items: center;
+}
+.heart-svg{
+  width: 16px;
+  height: 16px;
+}
+.burger{
+  width: 20px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  &__line{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $colorBlack;
+    &--top{
+      top: 0;
+      left: 0;
+    }
+    &--middle{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    &--bottom{
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+.nav{
+  padding-top: 16px;
+  padding-bottom: 17px;
+  position: relative;
+  overflow: hidden;
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: transform 0.2s linear;
+  }
+  &__item:not(:last-child){
+    margin-right: 10px;
+  }
+  &__link,
+  &__link:active,
+  &__link:focus,
+  &__link:hover{
+    font-size: 14px;
+    color: $colorBlack;
+    padding: 3px 10px;
+    border-radius: 34px;
+    transition: background 0.2s linear;
+  }
+  &__link:hover{
+    background-color: $colorGreyWhite2;
+  }
+  &__link--nothover:hover{
+    background-color: transparent;
+  }
+  &__button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    border: none;
+    background: linear-gradient(90deg, rgb(255 255 255 / 72%) 1%, #ffffff 30%);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 2;
+    cursor: pointer;
+    &.disactive{
+      display: none;
+    }
+    &--left{
+      right: auto;
+      top: 3px;
+      left: -1px;
+      transform: rotate(180deg);
+    }
+  }
+  &__svg{
+    width: 8px;
+    height: 14px;
+    margin-right: 12px;
+  }
+}
+
+.scroll-menu{
+  padding: 24px 0;
+  background-color: $colorWhite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  box-shadow: 0px 7px 13px rgb(49 71 129 / 7%);
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 18px;
+    color: $colorBlack;
+    margin-bottom: 5px;
+  }
+}
+.locations-dropdown{
+  position: absolute;
+  top: 200%;
+  left: 0;
+  z-index: 1;
+  background-color: $colorWhite;
+  border-radius: 10px;
+  width: 385px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 7px 38px rgb(44 62 106 / 25%);
+  &.active{
+    animation: cityChange 0.3s ease-in-out forwards;
+    visibility: visible;
+  }
+  &__content{
+    padding: 16px;
+  }
+  &__allcity{
+    max-height: 300px;
+    overflow-x: auto;
+    &::-webkit-scrollbar{
+      width: 6px;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-track{
+      background-color: transparent;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: #d8d8d8;
+      border-radius: 5px;
+    }
+  }
+  &__citys{
+    font-size: 14px;
+    line-height: 22px;
+    padding: 11px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__city-state{
+    font-size: 12px;
+    line-height: 20px;
+    color: #767676;
+  }
+  &__input{
+    display: block;
+    width: 100%;
+    border-radius: 100px;
+    height: 48px;
+    font-size: 14px;
+    width: 100%;
+    padding: 0 40px 0 25px;
+    border: 2px solid #abc8ea;
+    outline: none;
+    transition: box-shadow 0.2s linear;
+    &:focus{
+      box-shadow: 0 0 0 2px $colorBlue;
+      border-color: transparent;
+    }
+  }
+  &__selected-city{
+    padding: 15px 0;
+  }
+  &__button{
+    font-family: 'Formular',sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 16px 0;
+    color: $colorWhite;
+    background-color: $colorBlue;
+    border: none;
+    width: 100%;
+    &--shields{
+      width: fit-content;
+      border-radius: 49px;
+      padding: 9px 35px 9px 17px;
+      margin: 4px 8px 4px 0;
+      background-image: url('../img/close-white.svg');
+      background-repeat: no-repeat;
+      background-size: 14px 14px;
+      background-position: right 12px center;
+    }
+  }
+
+}
+.hide{
+  display: none;
+}
+
+.spinner{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes cityChange{
+  from{
+    top: 200%;
+    opacity: 0;
+  }
+  to{
+    top: 120%;
+    opacity: 1;
+  }
+}
