@@ -122,7 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   locationTown.addEventListener('click', function () {
-    var input = document.querySelector('.locations-dropdown__input').focus();
     locationsDropdownBlock.classList.toggle('active');
     fetch(fetchUrl).then(function (response) {
       return response.json();
@@ -133,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
         areas.forEach(function (item) {
           allcityBlock.innerHTML += htmlCityItem(item);
           var cityNames = document.querySelectorAll('.locations-dropdown__city-name');
+          document.querySelector('.locations-dropdown__input').focus();
           searctCity(cityNames);
         });
       }, 2000);
@@ -190,6 +190,11 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.add('locations-dropdown__button');
         button.classList.add('locations-dropdown__button--shields');
         button.innerHTML = item.querySelector('.locations-dropdown__city-name').textContent;
+
+        button.onclick = function () {
+          this.style.display = 'none';
+        };
+
         selectedSity.appendChild(button);
       });
     });

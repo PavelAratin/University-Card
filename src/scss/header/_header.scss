@@ -298,17 +298,6 @@
     padding: 11px 16px;
     display: flex;
     flex-direction: column;
-    position: relative;
-    &::before{
-      content: '';
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: -10px;
-      right: -10px;
-      bottom: 0;
-      background-color: red;
-    }
   }
   &__city-state{
     font-size: 12px;
@@ -346,6 +335,7 @@
     background-color: $colorBlue;
     border: none;
     width: 100%;
+    cursor: pointer;
     &--shields{
       width: fit-content;
       border-radius: 49px;
