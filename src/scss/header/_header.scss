@@ -1,5 +1,7 @@
 .header{
   background-color: $colorWhite;
+  position: relative;
+  z-index: 2;
   &__top,
   &__locations,
   &__likes,
