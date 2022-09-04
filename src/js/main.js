@@ -238,13 +238,12 @@ document.addEventListener("DOMContentLoaded", function () {
           sumWidth += Math.floor(item.getBoundingClientRect().width)
         }
       });
-      navListWrapper.style.cssText = `transform:translateX(${-sumWidth - (-90)}px);`;
+      navListWrapper.style.cssText = `transform:translateX(${-sumWidth - (-50)}px);`;
       navButtons.forEach(function (button) {
         button.classList.remove('disactive')
       });
       this.classList.add('disactive');
       if(btn.classList.contains('nav__button--left')){
-        console.log(sumWidth / 2)
         navListWrapper.style.cssText = `transform:translateX(${0}px);`;
       }
 

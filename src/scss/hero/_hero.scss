@@ -2,6 +2,7 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  z-index: -1;
   &__imgbox{
     width: 100%;
     height: 350px;

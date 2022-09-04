@@ -7,7 +7,7 @@ const autoprefixer = require('gulp-autoprefixer');//автопрефиксер
 const sourcemaps = require('gulp-sourcemaps');// отслеживание ошибок в разных файлах
 const browserSync = require('browser-sync').create(); //браузерсинк - автоперезагрузка браузера
 const fileInclude = require('gulp-file-include'); // позволяет вкладывать файлы друг в друга
-const svgSprite = require('gulp-svg-sprite');// работа с свг-спрайтами
+// const svgSprite = require('gulp-svg-sprite');// работа с свг-спрайтами
 const ttf2woff = require('gulp-ttf2woff'); //конвертация шрифта
 const ttf2woff2 = require('gulp-ttf2woff2'); //конвертация шрифта
 const del = require('del');//удаление папки app после запуска галп
@@ -25,17 +25,17 @@ const fonts = () => {
     .pipe(dest('./app/fonts/'))
 }
 //функция для работы с свг-спрайтами
-const svgSprites = () => {
-  return src('./src/img/**.svg')
-    .pipe(svgSprite({
-      mode: {
-        stack: {
-          sprite: '../sprite.svg'
-        }
-      }
-    }))
-    .pipe(dest('./app/img'))
-}
+// const svgSprites = () => {
+//   return src('./src/img/**.svg')
+//     .pipe(svgSprite({
+//       mode: {
+//         stack: {
+//           sprite: '../sprite.svg'
+//         }
+//       }
+//     }))
+//     .pipe(dest('./app/img'))
+// }
 //функция для scss
 const styles = () => {
   return src('./src/scss/**.scss')
@@ -132,7 +132,7 @@ const watchFiles = () => {
   watch('./src/img**.jpg', imgToApp);
   watch('./src/img**.png', imgToApp);
   watch('./src/img**.jpeg', imgToApp);
-  watch('./src/img**.svg', svgSprites);
+  // watch('./src/img**.svg', svgSprites);
   watch('./src/fonts/**.ttf', fonts);
   watch('./src/js/**/*.js', scipts);
 }
@@ -148,7 +148,7 @@ exports.faviconToApp = faviconToApp;
 exports.swiperToApp = swiperToApp;
 
 //в дефолтном таске мы используем функции(вызываются первый раз перед вотчингом)
-exports.default = series(clean, parallel(htmlInclude, scipts, chartToApp,swiperToApp, fonts, imgToApp, faviconToApp, svgSprites), styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scipts, chartToApp,swiperToApp, fonts, imgToApp, faviconToApp), styles, watchFiles);
 //код для build-версии
 //функция для работы со скриптами
 const sciptsBuild = () => {
@@ -196,4 +196,4 @@ const tinypng = () => {
     .pipe(dest('./app/img'))
 }
 //dev-сборка
-exports.build = series(clean, parallel(htmlInclude, sciptsBuild, chartToApp,swiperToApp, fonts, imgToApp, faviconToApp, svgSprites), stylesBuild, tinypng);
+exports.build = series(clean, parallel(htmlInclude, sciptsBuild, chartToApp,swiperToApp, fonts, imgToApp, faviconToApp), stylesBuild, tinypng);
