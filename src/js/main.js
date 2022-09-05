@@ -107,9 +107,12 @@ document.addEventListener("DOMContentLoaded", function () {
         </ul>
       </div>
       <button class="button-in-favorites scroll-menu__button-in-favorites">
-        <svg class="heart-svg hero__heart-svg">
-          <use xlink:href="img/sprite.svg#heart"></use>
-        </svg>
+      <svg class="heart-svg header__heart-svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M7.5 14.0125L6.4125 13.0225C2.55 9.52 0 7.21 0 4.375C0 2.065 1.815 0.25 4.125 0.25C5.43 0.25 6.6825 0.8575 7.5 1.8175C8.3175 0.8575 9.57 0.25 10.875 0.25C13.185 0.25 15 2.065 15 4.375C15 7.21 12.45 9.52 8.5875 13.03L7.5 14.0125Z"
+        fill="#A7A7A7" />
+    </svg>
         <span>В Избранное</span>
       </button>
     </div>
@@ -136,12 +139,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function htmlCityItem(data) {
-    return `
-    <div class="locations-dropdown__citys">
-      <span class="locations-dropdown__city-name">${data.areas[0].name ? data.areas[0].name : ''}</span>
-      <span class="locations-dropdown__city-state">${data.name}</span>
-    </div>
-    `
+    console.log(data.areas.length)   
+      return `
+      <div class="locations-dropdown__citys">
+        <span class="locations-dropdown__city-name">${data.areas.length ? data.areas[0].name : ''}</span>
+        <span class="locations-dropdown__city-state">${data.areas.length ? data.name : ''}</span>
+      </div>
+      `;
   }
 
   locationTown.addEventListener('click', function () {
